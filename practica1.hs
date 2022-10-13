@@ -141,7 +141,8 @@ palindromo xs
 recibido con el mismo pero usando reverse-}
 
 -- 18. Definir una función que recibe dos número para realizar x/y
-safeDivision :: (Floating a) => a -> a -> a
+safeDivision :: Float -> Float -> Float
+safeDivision _ 0 = error "No se puede dividir entre 0"
 safeDivision x y = x / y
 -- Tuve una serie de errores al comparar y con 0 
 
